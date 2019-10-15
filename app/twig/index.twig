@@ -5,7 +5,7 @@
     <head>
 
         {# Site Title #}
-        <title>Clone: Playground</title>
+        <title>Talent Cloud: Job Poster Preview</title>
         
         {# Charset #}
         <meta charset="utf-8" />
@@ -50,15 +50,182 @@
     {# Playground's Body #}
     <body data-clone>
 
-        <div class="pg-hero">
-            <div data-c-radius="rounded">
-                <div data-c-background="black(100)" data-c-color="white" data-c-padding="all(double)">
-                    <h1 data-c-font-size="h1" data-c-margin="bottom(normal)" data-c-font-weight="bold">Welcome to Clone Playground!</h1>
-                    <p data-c-margin="bottom(half)">Playground gives you access to everything you need to have some fun prototyping things with Clone. You can stick to regular HTML, or you can dive into the deep end and build some fun stuff with JavaScript, Sass, and Twig.</p>
-                    <p>Take a peek inside <span data-c-font="mono">app/twig/index.twig</span> to get started!</p>
+        <div data-c-overlay="black(90)" data-c-padding="tb(triple)" style="background-image: url('https://images.unsplash.com/photo-1556742400-b5b7c5121f99?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');">
+            <div data-c-container="large" data-c-align="base(center) tl(left)">
+                <h1 data-c-font-size="h2" data-c-color="white">Job Poster Preview</h1>
+                <div data-c-color="white" data-c-margin="top(double)">
+                    <nav
+                        aria-label="breadcrumb"
+                        data-c-breadcrumbs>
+                        <ol>
+                            <li>
+                                <a
+                                    href="#link-to-page"
+                                    title="This is the title of the page link.">
+                                    Talent Cloud
+                                </a>
+                                <i class="material-icons">arrow_right</i>
+                            </li>
+                            <li>
+                                <a
+                                    href="#link-to-page"
+                                    title="This is the title of the page link.">
+                                    My Job Actions
+                                </a>
+                                <i class="material-icons">arrow_right</i>
+                            </li>
+                            <li>
+                                <a
+                                    href="#link-to-page"
+                                    title="This is the title of the page link.">
+                                    CS2 - Business Analyst
+                                </a>
+                                <i class="material-icons">arrow_right</i>
+                            </li>
+                            
+                            <li>
+                                <span aria-current="page">Job Poster Preview</span>
+                                <i class="material-icons">arrow_right</i>
+                            </li>
+                        </ol>
+                    </nav>
                 </div>
-                <div class="pg-alert" data-c-color="white" data-c-padding="tb(normal) rl(double)">
-                    <p>Need a refresher on how to use Clone? <a href="https://designwithclone.ca/" title="Open the Clone documentation in a new window or tab." target="_blank">Check out the docs</a>.</p>
+            </div>
+        </div>
+
+        <div data-c-background="gray(10)" data-c-padding="top(double) bottom(triple)">
+            <div data-c-container="medium">
+                <!-- Alerts can have three arguments: information, warning, error. You can also include the toast argument on any of these types to fix the alert to the bottom right of the viewport. e.g. information(toast) -->
+                <div
+                    data-c-alert="warning"
+                    data-c-radius="rounded"
+                    role="alert"
+                    data-c-margin="bottom(double)">
+                    <div data-c-padding="half">
+                        <!-- This title/icon span is optional. -->
+                        <span
+                            data-c-margin="bottom(quarter)"
+                            data-c-heading="h5"
+                            data-c-font-weight="bold">
+                            <i
+                                aria-hidden="true"
+                                class="material-icons">
+                                report_problem
+                            </i>
+                            Just a heads up! This is a preview of your job poster.
+                        </span>
+                        <p>
+                            In order to better help you understand how an applicant will see your job, we've included a preview of your information in the format applicants will see it in. At the bottom of this preview you can save and quit, or submit your draft to Talent Cloud for review.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div data-c-container="full">
+                <div data-c-border="all(thin, solid, black)" data-c-radius="rounded" data-c-background="white(100)">
+                    <img src="$ROOT/img/preview.png" alt="A job preview.">
+                </div>
+            </div>
+            <div data-c-container="medium">
+                <p data-c-margin="tb(double)">
+                    Now that you've seen the job poster as it will appear to applicants, feel free to make any changes you need to make before finalizing the submission. You can return to your dashboard if you'd like to edit things later, head over to the job poster builder if you'd like to make your changes right now, or, if you're happy with the poster as it is, submit it for final review.
+                </p>
+                <hr data-c-margin="tb(double)">
+                <div data-c-grid="gutter">
+                    <div data-c-grid-item="tl(1of2)" data-c-align="base(center) tl(left)">
+                        <a href="" title="" data-c-button="outline(c1)" data-c-radius="rounded">
+                            Return to Dashboard
+                        </a>
+                        <a href="" title="" data-c-button="outline(c1)" data-c-radius="rounded">
+                            Edit Job Poster
+                        </a>
+                    </div>
+                    <div data-c-grid-item="tl(1of2)" data-c-align="base(center) tl(right)">
+                        <button data-c-button="solid(c1)" data-c-radius="rounded" data-c-dialog-id="example-dialog-01" data-c-dialog-action="open">
+                            Approve and Submit to Talent Cloud
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-c-background="black(100)" data-c-padding="tb(triple)">
+            <div data-c-container="large" data-c-align="base(center)">
+                <h1 data-c-font-size="h2" data-c-font-weight="bold" data-c-color="white">FOOTER</h1>
+            </div>
+        </div>
+
+        <!-- This overlay is required somewhere on the site, but not necessarily next to the dialog.-->
+        <div data-c-dialog-overlay></div>
+
+        <!-- Actual Dialog -->
+        <div
+            aria-hidden="true"
+            aria-describedby="example-dialog-01-description"
+            aria-labelledby="example-dialog-01-title"
+            data-c-dialog
+            data-c-dialog-id="example-dialog-01"
+            data-c-padding="top(double) bottom(double)"
+            role="dialog">
+            <div
+                data-c-background="white(100)"
+                data-c-radius="rounded">
+                <div
+                    data-c-padding="tb(normal) right(triple) left(normal)"
+                    data-c-border="bottom(thin, solid, black)"
+                    data-c-color="white"
+                    data-c-background="c2(100)">
+                    <h5
+                        data-c-font-size="h4"
+                        id="example-dialog-01-title"
+                        data-c-dialog-focus
+                        data-c-font-weight="600">
+                        Are you sure you want to submit your job poster?
+                    </h5>
+                    <!-- This subtitle p can be removed if a subtitle isn't needed. -->
+                    <p
+                        data-c-font-size="h5"
+                        data-c-margin="top(half)">
+                        This is a final submission and will prevent you from editing your job poster using the job poster builder tool from this point forward.
+                    </p>
+                    <button
+                        data-c-dialog-action="close"
+                        data-c-dialog-id="example-dialog-01"
+                        type="button"
+                        data-c-color="white">
+                        <i class="material-icons">close</i>
+                    </button>
+                </div>
+                <div
+                    data-c-border="bottom(thin, solid, black)"
+                    data-c-padding="normal">
+                    <div id="example-dialog-01-description">
+                        <p>By submitting this job poster for approval, editing will be locked and Talent Cloud will contact you about the specifics required for posting. If you're sure you're ready to submit this poster, click the button below, otherwise, you can click the "Nope, let me review." button to return to the job poster preview page.</p>
+                    </div>
+                </div>
+                <!-- The following dialog actions can be customized depending on the dialog. -->
+                <div data-c-padding="normal">
+                    <div data-c-grid="gutter middle">
+                        <div data-c-grid-item="base(1of2)">
+                            <button
+                                data-c-button="outline(c1)"
+                                data-c-radius="rounded"
+                                data-c-dialog-action="close"
+                                data-c-dialog-id="example-dialog-01">
+                                Nope, let me review.
+                            </button>
+                        </div>
+                        <div
+                            data-c-grid-item="base(1of2)"
+                            data-c-alignment="base(right)">
+                            <button
+                                data-c-button="solid(go)"
+                                data-c-radius="rounded"
+                                data-c-dialog-action="close"
+                                data-c-dialog-id="example-dialog-01">
+                                Yes, let's submit.
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
